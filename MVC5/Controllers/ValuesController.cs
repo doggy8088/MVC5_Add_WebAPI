@@ -7,31 +7,51 @@ using System.Web.Http;
 
 namespace MVC5.Controllers
 {
+    /// <summary>
+    /// ASP.NET Web API 範例: Values API 控制器
+    /// </summary>
     public class ValuesController : ApiController
     {
-        // GET: api/Values
+        /// <summary>
+        /// 取得所有 Values
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Values/5
+        /// <summary>
+        /// 取得單一筆 Value 的值
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/Values
+        /// <summary>
+        /// 更新一筆新 Value
+        /// </summary>
+        /// <param name="value"></param>
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT: api/Values/5
+        /// <summary>
+        /// 建立一筆新 Value
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE: api/Values/5
+        /// <summary>
+        /// 刪除一筆新 Value
+        /// </summary>
+        /// <param name="id"></param>
         public void Delete(int id)
         {
         }
